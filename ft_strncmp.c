@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:51:21 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/20 11:09:30 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/20 16:00:13 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = -1;
 	while (s1[++i] && s2[i] && i < n)

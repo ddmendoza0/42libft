@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 17:00:16 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/19 18:35:54 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/20 15:59:28 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t			srclen;
-	unsigned int	i;
+	size_t	src_len;
+	size_t	i;
 
-	srclen = ft_strlen(src);
+	src_len = ft_strlen(src);
 	i = -1;
 	while (src[++i] && i < size)
 		dst[i] = src[i];
 	dst[i] = '\0';
-	return (srclen);
+	return (src_len);
 }

@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:05:06 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/20 11:40:45 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/20 16:01:17 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	unsigned int	i;
-	char			*ptr;
+	size_t	i;
+	char	*ptr;
 
 	if (little[0] == '\0')
 		return ((char *)big);

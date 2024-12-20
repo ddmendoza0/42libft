@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 09:52:23 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/20 10:10:43 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/20 16:02:32 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
+	size_t	i;
 	char	*rc;
 
 	i = -1;
