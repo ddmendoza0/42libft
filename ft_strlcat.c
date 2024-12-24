@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 18:23:28 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/23 12:41:30 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/24 17:27:05 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
+	if (!(size > dst_len))
+		return (src_len + size);
 	i = -1;
 	while (src[++i] && i < (size - dst_len - 1))
 		dst[i + dst_len] = src[i];
