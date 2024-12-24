@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 15:15:24 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/20 15:36:55 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/24 18:26:08 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,10 @@ int	ft_atoi(const char *nptr)
 	while (nptr[++i] && ft_isspace(nptr[i]))
 		;
 	sign = 1;
-	if (nptr[i] == '-')
+	if (nptr[i] == '-' || nptr[i] == '+')
 	{
-		sign = -1;
+		if (nptr[i] == '-')
+			sign = -1;
 		i++;
 	}
 	result = 0;
