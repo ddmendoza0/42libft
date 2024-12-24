@@ -6,11 +6,11 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 13:02:47 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/19 13:13:09 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/24 16:51:54 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (!(c >= 48 && c <= 57))
 		return (0);
