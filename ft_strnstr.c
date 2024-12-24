@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 10:05:06 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/20 16:01:17 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/24 18:21:36 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
+	size_t	lit_len;
 	char	*ptr;
 
-	if (little[0] == '\0')
+	if (!*little)
 		return ((char *)big);
+	lit_len = ft_strlen(little);
 	i = -1;
 	while (big[++i] && i < len)
 	{
-		if (ft_strncmp(&big[i], &little[0], ft_strlen(little)) == 0)
+		if (ft_strncmp(&big[i], little, lit_len) == 0 && \
+				i + lit_len < len)
 		{
 			ptr = (char *)&big[i];
 			return (ptr);
