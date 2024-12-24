@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 11:01:18 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/22 11:06:49 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/24 12:17:40 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	dst_size = ft_strlen(s);
-	dst = (char *)malloc(dst_size);
+	dst = (char *)malloc((dst_size + 1) * sizeof(char *));
 	if (dst == NULL)
 		return (NULL);
 	i = -1;
