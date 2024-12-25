@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/25 20:48:22 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/25 21:01:06 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,15 +51,15 @@ SRCS 	= $(CUR_DIR)/ft_isalnum.c  \
 
 OBJS 	= $(SRCS:.c=.o)
 
-BONUS	= 	$(CUR_DIR)/ft_lstnew.c \
-		$(CUR_DIR)/ft_lstadd_front.c \
-		$(CUR_DIR)/ft_lstlast.c \
-		$(CUR_DIR)/ft_lstadd_back.c \
-		$(CUR_DIR)/ft_lstdelone.c \
-		$(CUR_DIR)/ft_lstclear.c \
-		$(CUR_DIR)/ft_lstiter.c \
-		$(CUR_DIR)/ft_lstmap.c \
-		$(CUR_DIR)/ft_lstsize.c
+BONUS	= 	$(CUR_DIR)/ft_lstnew_bonus.c \
+		$(CUR_DIR)/ft_lstadd_front_bonus.c \
+		$(CUR_DIR)/ft_lstlast_bonus.c \
+		$(CUR_DIR)/ft_lstadd_back_bonus.c \
+		$(CUR_DIR)/ft_lstdelone_bonus.c \
+		$(CUR_DIR)/ft_lstclear_bonus.c \
+		$(CUR_DIR)/ft_lstiter_bonus.c \
+		$(CUR_DIR)/ft_lstmap_bonus.c \
+		$(CUR_DIR)/ft_lstsize_bonus.c
 
 
 BONUS_OBJS = $(BONUS:.c=.o)
