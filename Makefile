@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/25 11:01:08 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/25 12:06:52 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,11 +49,16 @@ SRCS 	= $(CUR_DIR)/ft_isalnum.c  \
 	$(CUR_DIR)/ft_putendl_fd.c \
 	$(CUR_DIR)/ft_putnbr_fd.c
 
-BONUS	= 
-
 OBJS 	= $(SRCS:.c=.o)
 
-BONUS_OBJS:	$(BONUS:.c=.o)
+BONUS	= 	$(CUR_DIR)/ft_lstnew.c \
+		$(CUR_DIR)/ft_lstadd_front.c \
+		$(CUR_DIR)/ft_lstlast.c \
+		$(CUR_DIR)/ft_lstadd_back.c \
+		$(CUR_DIR)/ft_lstsize.c
+
+
+BONUS_OBJS = $(BONUS:.c=.o)
 
 CLIB	= ar rcs
 
