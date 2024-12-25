@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 11:14:24 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/25 11:35:25 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/25 12:15:46 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new)
-	{
-		new->next = *lst;
-		*lst = new;
-	}
+	if (!lst || !new)
+		return ();
+	new->next = *lst;
+	*lst = new;
 }
