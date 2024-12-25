@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 12:23:25 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/25 10:32:50 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/25 10:36:48 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 	long			n_long;
 	char			*str_n;
 
-	n_long = n;
+	n_long = (long)n;
 	if (n < 0)
 		n_long *= -1;
 	str_n = (char *)malloc((ft_nsize(n_long) + 1) * sizeof(char *));
