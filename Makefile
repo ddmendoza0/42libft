@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/24 16:33:54 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/25 11:01:08 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,11 @@ SRCS 	= $(CUR_DIR)/ft_isalnum.c  \
 	$(CUR_DIR)/ft_putendl_fd.c \
 	$(CUR_DIR)/ft_putnbr_fd.c
 
+BONUS	= 
+
 OBJS 	= $(SRCS:.c=.o)
+
+BONUS_OBJS:	$(BONUS:.c=.o)
 
 CLIB	= ar rcs
 
@@ -67,12 +71,15 @@ $(NAME):	$(OBJS)
 
 all:		$(NAME)
 
+bonus:		$(BONUS_OBJS)
+		$(CLIB) $(NAME) $(OBJS) $(BONUS_OBJS)
+
 clean:
-		$(RM) $(OBJS)
+		$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean: 	clean
 		$(RM) $(NAME)
 
 re: 		fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:		all clean fclean re bonus
