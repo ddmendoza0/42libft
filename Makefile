@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/25 19:42:49 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/25 20:48:22 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,10 @@ BONUS	= 	$(CUR_DIR)/ft_lstnew.c \
 		$(CUR_DIR)/ft_lstadd_front.c \
 		$(CUR_DIR)/ft_lstlast.c \
 		$(CUR_DIR)/ft_lstadd_back.c \
+		$(CUR_DIR)/ft_lstdelone.c \
+		$(CUR_DIR)/ft_lstclear.c \
+		$(CUR_DIR)/ft_lstiter.c \
+		$(CUR_DIR)/ft_lstmap.c \
 		$(CUR_DIR)/ft_lstsize.c
 
 
