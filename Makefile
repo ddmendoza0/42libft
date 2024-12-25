@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/25 12:06:52 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/25 19:42:49 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,13 +66,13 @@ CC	= cc
 
 RM	= rm -f
 
-CFLAGS 	= -Wall -Wextra -Werror -g
+CFLAGS 	= -Wall -Wextra -Werror
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME):	$(OBJS)
-		$(CLIB) -o $(NAME) $(OBJS)
+$(NAME):	$(OBJS) $(BONUS_OBJS)
+		$(CLIB) -o $(NAME) $(OBJS) $(BONUS_OBJS)
 
 all:		$(NAME)
 
