@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 11:45:25 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/25 12:17:18 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:24:57 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*curr;
 
-	if (!lst)
-		return (NULL);
 	curr = lst;
 	while (curr && curr->next)
 		curr = curr->next;

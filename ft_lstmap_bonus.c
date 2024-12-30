@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 20:17:25 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/25 20:49:53 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:06:08 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,20 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*lst_new;
 	t_list	*node_new;
-	t_list	*curr;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	curr = lst;
-	while (curr)
+	lst_new = NULL;
+	while (lst)
 	{
-		node_new = ft_lstnew(f(curr->content));
+		node_new = ft_lstnew(f(lst->content));
 		if (!node_new)
 		{
 			ft_lstclear(&lst_new, del);
 			return (NULL);
 		}
 		ft_lstadd_back(&lst_new, node_new);
-		curr = curr->next;
+		lst = lst->next;
 	}
 	return (lst_new);
 }
