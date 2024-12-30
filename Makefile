@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/25 21:01:06 by dmendoza         ###   ########.fr        #
+#    Updated: 2024/12/30 10:55:29 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,12 +75,12 @@ CFLAGS 	= -Wall -Wextra -Werror
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
-$(NAME):	$(OBJS) $(BONUS_OBJS)
-		$(CLIB) -o $(NAME) $(OBJS) $(BONUS_OBJS)
+$(NAME):	$(OBJS)
+		$(CLIB) -o $(NAME) $(OBJS)
 
 all:		$(NAME)
 
-bonus:		$(BONUS_OBJS)
+bonus:		$(OBJS) $(BONUS_OBJS)
 		$(CLIB) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 clean:
