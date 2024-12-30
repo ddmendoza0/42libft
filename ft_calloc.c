@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 16:05:23 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/30 15:55:54 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:20:25 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		return (NULL);
 	t_size = nmemb * size;
 	if (t_size == 0)
-		return (NULL);
+		return ((void *)malloc(1));
 	ptr = (void *)malloc(t_size);
 	if (ptr == NULL)
 		return (NULL);

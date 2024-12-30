@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 16:31:55 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/24 12:14:42 by dmendoza         ###   ########.fr       */
+/*   Updated: 2024/12/30 16:20:05 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,8 +72,10 @@ char	**ft_split(char const *s, char c)
 {
 	char	**s_split;
 
+	if (!s)
+		return (NULL);
 	s_split = (char **)malloc((ft_countstrs(s, c) + 1) * sizeof(char *));
-	if (!s_split || !s)
+	if (!s_split)
 		return (NULL);
 	ft_findstr(s, c, s_split);
 	if (!s_split)
