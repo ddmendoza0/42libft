@@ -6,11 +6,11 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 19:54:58 by dmendoza          #+#    #+#             */
-/*   Updated: 2025/01/02 16:01:50 by dmendoza         ###   ########.fr       */
+/*   Updated: 2025/01/02 18:00:35 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {

@@ -6,11 +6,11 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/25 11:02:16 by dmendoza          #+#    #+#             */
-/*   Updated: 2025/01/02 16:03:19 by dmendoza         ###   ########.fr       */
+/*   Updated: 2025/01/02 18:01:42 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 t_list	*ft_lstnew(void *content)
 {
