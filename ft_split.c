@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 16:31:55 by dmendoza          #+#    #+#             */
-/*   Updated: 2024/12/30 16:20:05 by dmendoza         ###   ########.fr       */
+/*   Updated: 2025/01/02 15:42:09 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,9 @@ static char	**ft_findstr(char const *s, char c, char **s_split)
 			else
 				str_len = ft_strchr(s, c) - s;
 			s_split[i] = ft_substr(s, 0, str_len);
-			if (!s_split[i++])
-			{
-				ft_memfree(s_split, i - 1);
-				return (NULL);
-			}
+			if (!s_split[i])
+				return (ft_memfree(s_split, i));
+			i++;
 			s += str_len;
 		}
 	}
@@ -72,8 +70,6 @@ char	**ft_split(char const *s, char c)
 {
 	char	**s_split;
 
-	if (!s)
-		return (NULL);
 	s_split = (char **)malloc((ft_countstrs(s, c) + 1) * sizeof(char *));
 	if (!s_split)
 		return (NULL);

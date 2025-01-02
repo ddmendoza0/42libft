@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2024/12/30 10:55:29 by dmendoza         ###   ########.fr        #
+#    Updated: 2025/01/02 15:52:30 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,7 +72,7 @@ RM	= rm -f
 
 CFLAGS 	= -Wall -Wextra -Werror
 
-.c.o:
+%.o:	%.c Makefile libft.h libft_bonus.h
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME):	$(OBJS)
