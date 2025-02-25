@@ -6,7 +6,7 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/11 11:53:52 by dmendoza          #+#    #+#             */
-/*   Updated: 2025/02/11 11:55:01 by dmendoza         ###   ########.fr       */
+/*   Updated: 2025/02/25 12:36:49 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,5 @@ unsigned int	ft_hexlen(unsigned long nb);
 int				ft_numlen(int nb);
 void			ft_puthex(unsigned long nb, unsigned int upper);
 int				ft_ulen(unsigned int n);
+char			*ft_strtok(char *str, const char *delimiters);
 #endif
