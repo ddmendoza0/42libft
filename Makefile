@@ -6,7 +6,7 @@
 #    By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/19 15:41:58 by dmendoza          #+#    #+#              #
-#    Updated: 2025/02/25 12:36:16 by dmendoza         ###   ########.fr        #
+#    Updated: 2025/06/06 18:41:46 by dmendoza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ SRCS 	= ft_isalnum.c ft_isalpha.c ft_isdigit.c ft_isascii.c ft_isprint.c \
 	  ft_lstadd_front.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 	  ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_lstsize.c get_next_line.c \
 	  ft_putchar.c ft_putstr.c ft_printf.c ft_printf_utils.c printf_print.c \
-	  ft_strtok.c
+	  ft_strtok.c ft_atof.c ft_isspace.c
 
 OBJS 	= $(SRCS:.c=.o)
 
@@ -37,9 +37,7 @@ RM	= rm -f
 CFLAGS 	= -Wall -Wextra -Werror
 
 %.o:	%.c
-		@echo "Compiling libft objs $<..."
 		@$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
-		@echo "...compilation completed"
 
 $(NAME): $(INCLUDES) $(OBJS)
 		@echo "Building libft..."
