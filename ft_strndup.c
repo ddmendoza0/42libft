@@ -6,16 +6,16 @@
 /*   By: dmendoza <dmendoza@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/11 19:45:06 by dmendoza          #+#    #+#             */
-/*   Updated: 2025/07/11 19:48:42 by dmendoza         ###   ########.fr       */
+/*   Updated: 2025/07/13 16:24:55 by dmendoza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libf.h"
+#include "libft.h"
 
 char	*ft_strndup(const char *s, size_t n)
 {
-	char	*dup;
-	int		i;
+	char		*dup;
+	size_t		i;
 
 	if (!s)
 		return (NULL);
