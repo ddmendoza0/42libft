@@ -40,7 +40,7 @@ int	printf_p(void *ptr)
 
 	if (!ptr)
 		return (write(1, "(nil)", 5));
-	address = (unsigned long)ptr;
+	address = (uintptr_t)ptr;
 	printed = 0;
 	printed += write(1, "0x", 2);
 	ft_puthex(address, 0);
